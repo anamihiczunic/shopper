@@ -1,0 +1,11 @@
+<h1>Categories ( <%= @categories.count %> )</h1>
+<ol>
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to category_products_path(category) do %>
+        <%= category.title %>
+        (<%= category.products.count %> products)
+      <% end %>
+    </li>
+  <% end %>
+</ol>
